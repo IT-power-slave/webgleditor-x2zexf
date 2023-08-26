@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Example with Floating Window</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="propertyeditor.js"></script>
+    <script src="scenemanager.js"></script>
+  </head>
+  <body>
+    <div class="floating-window">
+      <h3>Camera Properties</h3>
+      <label> FOV: <input type="number" id="camera-fov" value="75" /> </label>
+      <label>
+        Near: <input type="number" id="camera-near" value="0.1" step="0.1" />
+      </label>
+      <label>
+        Far: <input type="number" id="camera-far" value="1000" step="1" />
+      </label>
+      <hr />
+      <h3>Geometry Type:</h3>
+      <select id="geometry-type">
+        <option value="BoxGeometry">Box</option>
+        <option value="ConeGeometry">Cone</option>
+        <option value="CylinderGeometry">Cylinder</option>
+        <option value="DodecahedronGeometry">Dodecahedron</option>
+        <option value="IcosahedronGeometry">Icosahedron</option>
+        <option value="OctahedronGeometry">Octahedron</option>
+        <option value="PlaneGeometry">Plane</option>
+        <option value="SphereGeometry">Sphere</option>
+        <option value="TorusGeometry">Torus</option>
+        <!-- Add other geometries as needed -->
+      </select>
+      <hr />
+      <h3>Wireframe Mode:</h3>
+      <label>
+        <input type="checkbox" id="wireframe-toggle" /> Enable Wireframe
+      </label>
+    </div>
+    <div id="scene-container"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
